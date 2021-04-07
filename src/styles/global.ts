@@ -11,13 +11,13 @@ export default createGlobalStyle`
     --white: #ffffff;
     --black: #000000;
     --light-black: #333333;
+    --warning: #FA4462;
     --text: #999999;
     --primary: #B22E6F;
     --caption: #AB2680;
   }
 
   body {
-    background-color: var(--background);
     color: var(--text);
   }
 
