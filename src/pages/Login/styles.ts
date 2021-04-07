@@ -96,7 +96,7 @@ export const InputWrapper = styled.div`
 `;
 
 export const SubmitButton = styled.button`
-  height: 3rem;
+  height: 2.8rem;
 
   font-size: 1.2rem;
   font-weight: 600;

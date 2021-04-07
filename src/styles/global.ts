@@ -11,6 +11,7 @@ export default createGlobalStyle`
     --white: #ffffff;
     --black: #000000;
     --light-black: #333333;
+    --border: rgba(51, 51, 51, 0.2);
     --warning: #FA4462;
     --text: #999999;
     --primary: #B22E6F;
