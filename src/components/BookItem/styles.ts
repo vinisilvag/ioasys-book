@@ -38,13 +38,14 @@ export const BookHeader = styled.div`
 `;
 
 export const BookTitle = styled.span`
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: var(--light-black);
 `;
 
 export const BookAuthor = styled.span`
   font-size: 0.8rem;
+  font-weight: 500;
   color: var(--caption);
 `;
 
@@ -56,6 +57,7 @@ export const BookInfo = styled.div`
 
 export const BookInfoItem = styled.span`
   font-size: 0.8rem;
+  font-weight: 500;
   line-height: 20px;
   color: var(--text);
 `;

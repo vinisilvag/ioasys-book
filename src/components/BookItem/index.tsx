@@ -12,12 +12,14 @@ import {
   BookInfoItem,
 } from './styles';
 
-const BookItem: React.FC = () => (
-  <ButtonContainer type="button">
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
+
+const BookItem: React.FC<ButtonProps> = ({ ...props }) => (
+  <ButtonContainer type="button" {...props}>
     <Container>
       <BookImage
         src="https://avatars.githubusercontent.com/u/58532241?v=4"
-        alt="Book"
+        alt="Livro"
       />
 
       <BookDetails>
