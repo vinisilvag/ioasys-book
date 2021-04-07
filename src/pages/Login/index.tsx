@@ -48,6 +48,7 @@ const Login: React.FC = () => {
     <Wrapper>
       <LoginContainer>
         <Logo variant="white" />
+
         <Form onSubmit={handleSubmit(onSubmit)}>
           <InputContainer>
             <Label htmlFor="email">Email</Label>

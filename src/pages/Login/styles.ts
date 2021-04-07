@@ -3,7 +3,7 @@ import backgroundImage from '../../assets/images/login-background.svg';
 
 export const Wrapper = styled.section`
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
 
   display: flex;
   align-items: center;
@@ -29,7 +29,7 @@ export const Form = styled.form`
 `;
 
 export const InputContainer = styled.fieldset`
-  max-width: 38%;
+  max-width: 34%;
   width: 100%;
   padding: 0.6rem 1rem;
 
@@ -96,7 +96,7 @@ export const InputWrapper = styled.div`
 `;
 
 export const SubmitButton = styled.button`
-  height: 3rem;
+  height: 2.8rem;
 
   font-size: 1.2rem;
   font-weight: 600;

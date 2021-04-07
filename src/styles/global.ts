@@ -11,13 +11,16 @@ export default createGlobalStyle`
     --white: #ffffff;
     --black: #000000;
     --light-black: #333333;
+    --border: rgba(51, 51, 51, 0.2);
     --warning: #FA4462;
     --text: #999999;
     --primary: #B22E6F;
     --caption: #AB2680;
+    --modal-background: rgba(0, 0, 0, 0.4);
   }
 
   body {
+    height: 100%;
     color: var(--text);
   }
 
@@ -35,5 +38,20 @@ export default createGlobalStyle`
   a {
     color: inherit;
     text-decoration: none;
+  }
+
+  ::-webkit-scrollbar {
+    width: 18px;
+  }
+
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: white;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--caption);
+    border-radius: 10px;
+    border: 5px solid white;
   }
 `;
