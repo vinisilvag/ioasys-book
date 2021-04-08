@@ -20,11 +20,15 @@ Você pode encontrar o protótipo da aplicação aqui: [https://www.figma.com/fi
 
 ## Iniciando o ambiente de desenvolvimento
 
-```console
+```
 git clone https://github.com/vinisilvag/ioasys-book.git
 cd ioasys-book
+
 yarn
 yarn start
+# or
+npm install
+npm run start
 ```
 
 ## Licensa
