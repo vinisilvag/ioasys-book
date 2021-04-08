@@ -5,6 +5,8 @@ import {
   ModalCloseButton,
   CloseImage,
   ModalContent,
+  BookNoImage,
+  NoPhotoIcon,
   BookImage,
   BookDetails,
   BookHeader,
@@ -20,29 +22,39 @@ import {
   ReviewText,
 } from './styles';
 
+import { BookData } from '../../pages/Home';
+
 import modalCloseIcon from '../../assets/icons/x.svg';
 import quotesIcon from '../../assets/icons/quotes.svg';
 
-interface ModalProps {
+interface BookModalProps {
+  book: BookData | null;
   modalIsOpen: boolean;
   toggleModalFunction: () => void;
 }
 
-const Modal: React.FC<ModalProps> = ({ modalIsOpen, toggleModalFunction }) => (
+const BookModal: React.FC<BookModalProps> = ({
+  book,
+  modalIsOpen,
+  toggleModalFunction,
+}) => (
   <Container modalIsOpen={modalIsOpen}>
     <ModalCloseButton type="button" onClick={toggleModalFunction}>
       <CloseImage src={modalCloseIcon} alt="Fechar" />
     </ModalCloseButton>
 
     <ModalContent>
-      <BookImage
-        src="https://avatars.githubusercontent.com/u/58532241?v=4"
-        alt="Livro"
-      />
+      {book?.imageUrl ? (
+        <BookImage src={book?.imageUrl} alt={book?.title} />
+      ) : (
+        <BookNoImage>
+          <NoPhotoIcon />
+        </BookNoImage>
+      )}
       <BookDetails>
         <BookHeader>
-          <BookTitle>Change By Design</BookTitle>
-          <BookAuthor>Tim Brown, Julie Zhuo, Fried Maximiilian</BookAuthor>
+          <BookTitle>{book?.title}</BookTitle>
+          <BookAuthor>{book?.authors.join(', ')}</BookAuthor>
         </BookHeader>
 
         <BookInfo>
@@ -51,37 +63,37 @@ const Modal: React.FC<ModalProps> = ({ modalIsOpen, toggleModalFunction }) => (
           <BookInfoSection>
             <BookInfoItem>
               <span>Páginas</span>
-              <span>304 páginas</span>
+              <span>{book?.pageCount} páginas</span>
             </BookInfoItem>
 
             <BookInfoItem>
               <span>Editora</span>
-              <span>Editora Loyola</span>
+              <span>{book?.publisher}</span>
             </BookInfoItem>
 
             <BookInfoItem>
               <span>Publicação</span>
-              <span>2020</span>
+              <span>{book?.published}</span>
             </BookInfoItem>
 
             <BookInfoItem>
               <span>Idioma</span>
-              <span>Inglês</span>
+              <span>{book?.language}</span>
             </BookInfoItem>
 
             <BookInfoItem>
               <span>Título Original</span>
-              <span>Change By Design</span>
+              <span>{book?.title}</span>
             </BookInfoItem>
 
             <BookInfoItem>
               <span>ISBN-10</span>
-              <span>0062856626</span>
+              <span>{book?.isbn10}</span>
             </BookInfoItem>
 
             <BookInfoItem>
               <span>ISBN-13</span>
-              <span>978-0062856623</span>
+              <span>{book?.isbn13}</span>
             </BookInfoItem>
           </BookInfoSection>
         </BookInfo>
@@ -92,12 +104,7 @@ const Modal: React.FC<ModalProps> = ({ modalIsOpen, toggleModalFunction }) => (
           <ReviewContainer>
             <ReviewText>
               <ReviewIcon src={quotesIcon} alt="Aspas" />
-              The subject of “design thinking” is the rage at business schools,
-              throughout corporations, and increasingly in the popular press—due
-              in large part to the work of IDEO, a leading design firm, and its
-              celebrated CEO, Tim Brown, who uses this book to show how the
-              techniques and strategies of design belong at every level of
-              business.
+              {book?.description}
             </ReviewText>
           </ReviewContainer>
         </BookReview>
@@ -106,4 +113,4 @@ const Modal: React.FC<ModalProps> = ({ modalIsOpen, toggleModalFunction }) => (
   </Container>
 );
 
-export default Modal;
+export default BookModal;

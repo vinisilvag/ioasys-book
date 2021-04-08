@@ -53,6 +53,6 @@ export default createGlobalStyle`
   ::-webkit-scrollbar-thumb {
     background-color: var(--caption);
     border-radius: 10px;
-    border: 5px solid white;
+    border: 6px solid white;
   }
 `;

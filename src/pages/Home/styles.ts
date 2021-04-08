@@ -23,24 +23,25 @@ export const Container = styled.section`
   }
 `;
 
+export const LoadingText = styled.p`
+  margin-top: 2rem;
+  color: var(--light-black);
+`;
+
 export const Main = styled.main`
-  margin-top: 3rem;
+  margin-top: 2.5rem;
 
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   column-gap: 1rem;
   row-gap: 1rem;
 
-  @media (max-width: 1136px) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  @media (max-width: 840px) {
+  @media (max-width: 990px) {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media (max-width: 580px) {
+  @media (max-width: 720px) {
     grid-template-columns: repeat(1, 1fr);
   }
 `;
