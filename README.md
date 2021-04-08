@@ -40,10 +40,12 @@ Nota: O deploy foi feito de forma gratuita no Netlify. Por isso, pode ser que se
 
 ## Tecnologias
 
-* [Create React App](https://pt-br.reactjs.org/docs/create-a-new-react-app.html) com Typescript
+* [Create React App](https://pt-br.reactjs.org/docs/create-a-new-react-app.html) com [Typescript](https://www.typescriptlang.org/)
+* [React Hook Form](https://react-hook-form.com/) e [Yup](https://www.npmjs.com/package/yup)
+* [React Helmet](https://www.npmjs.com/package/react-helmet-async)
+* [React Toastify](https://fkhadra.github.io/react-toastify/introduction)
 * [ESLint](https://eslint.org/) e [Prettier](https://prettier.io/)
 * [styled-components](https://styled-components.com/)
-* Layout Reponsivo
 * Context API
 * Persistência das informações do usuário através do localStorage
 
