@@ -64,6 +64,12 @@ export const BookTitle = styled.span`
   font-weight: 600;
   text-align: left;
   color: var(--light-black);
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 export const BookAuthor = styled.span`
@@ -71,6 +77,12 @@ export const BookAuthor = styled.span`
   font-weight: 500;
   text-align: left;
   color: var(--caption);
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 export const BookInfo = styled.div`
@@ -85,4 +97,10 @@ export const BookInfoItem = styled.span`
   line-height: 20px;
   color: var(--text);
   text-align: left;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;

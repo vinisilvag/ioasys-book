@@ -32,9 +32,9 @@ const AuthContext = createContext<AuthContextState>({} as AuthContextState);
 
 export const AuthProvider: React.FC = ({ children }) => {
   const [data, setData] = useState<AuthState>(() => {
-    const token = localStorage.getItem('@ioasysBook:token');
-    const refreshToken = localStorage.getItem('@ioasysBook:refreshToken');
-    const user = localStorage.getItem('@ioasysBook:user');
+    const token = localStorage.getItem('@ioasysBooks:token');
+    const refreshToken = localStorage.getItem('@ioasysBooks:refreshToken');
+    const user = localStorage.getItem('@ioasysBooks:user');
 
     if (token && refreshToken && user) {
       api.interceptors.request.use((config) => {
@@ -60,17 +60,17 @@ export const AuthProvider: React.FC = ({ children }) => {
       return config;
     });
 
-    localStorage.setItem('@ioasysBook:token', token);
-    localStorage.setItem('@ioasysBook:refreshToken', refreshToken);
-    localStorage.setItem('@ioasysBook:user', JSON.stringify(user));
+    localStorage.setItem('@ioasysBooks:token', token);
+    localStorage.setItem('@ioasysBooks:refreshToken', refreshToken);
+    localStorage.setItem('@ioasysBooks:user', JSON.stringify(user));
 
     setData({ token, refreshToken, user });
   }, []);
 
   const signOut = useCallback(() => {
-    localStorage.removeItem('@ioasysBook:token');
-    localStorage.removeItem('@ioasysBook:refreshToken');
-    localStorage.removeItem('@ioasysBook:user');
+    localStorage.removeItem('@ioasysBooks:token');
+    localStorage.removeItem('@ioasysBooks:refreshToken');
+    localStorage.removeItem('@ioasysBooks:user');
 
     setData({} as AuthState);
   }, []);

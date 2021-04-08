@@ -63,12 +63,10 @@ const Login: React.FC = () => {
       try {
         await signIn(signInCredentials);
 
-        setIsLoading(false);
         history.push('/app');
       } catch (err) {
-        setError(err.response.data.errors.message);
-      } finally {
         setIsLoading(false);
+        setError(err.response.data.errors.message);
       }
     },
     [signIn, history],

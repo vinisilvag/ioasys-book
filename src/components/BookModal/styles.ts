@@ -20,6 +20,11 @@ export const Container = styled.div<{ modalIsOpen: boolean }>`
   @media (max-width: 1136px) {
     padding: 0rem 1rem;
   }
+
+  @media (max-width: 740px) {
+    padding: 1rem 1rem;
+    align-items: flex-end;
+  }
 `;
 
 export const ModalCloseButton = styled.button`
@@ -54,7 +59,7 @@ export const ModalContent = styled.section`
   display: flex;
   flex-direction: row;
 
-  @media (max-width: 820px) {
+  @media (max-width: 880px) {
     padding: 2rem;
     padding-right: 4px;
   }
@@ -64,6 +69,7 @@ export const ModalContent = styled.section`
     padding-right: 4px;
     display: block;
     overflow-y: scroll;
+    height: calc(100% - 4rem);
   }
 `;
 
@@ -108,7 +114,7 @@ export const BookDetails = styled.div`
 
   overflow-y: scroll;
 
-  @media (max-width: 820px) {
+  @media (max-width: 880px) {
     margin-left: 2rem;
     padding-right: 2rem;
   }
@@ -131,15 +137,27 @@ export const BookInfo = styled.div`
 export const BookReview = styled.div``;
 
 export const BookTitle = styled.h1`
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   font-weight: 600;
   color: var(--light-black);
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 export const BookAuthor = styled.h1`
   font-size: 1rem;
   font-weight: 400;
   color: var(--caption);
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 export const BookInfoSectionTitle = styled.h3`
@@ -157,12 +175,15 @@ export const BookInfoItem = styled.span`
   font-size: 1rem;
   font-weight: 400;
 
+  text-align: right;
+
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 
   span:first-child {
+    text-align: left;
     font-weight: 500;
     color: var(--light-black);
   }
