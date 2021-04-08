@@ -20,17 +20,17 @@
   <a href="#licença">Licença</a>
 </p>
 
-<br>
+## Layout
+
+Você pode encontrar o protótipo da aplicação aqui: [https://www.figma.com/file/YXuqJUzNZcR7GveJfVWCKo/Desafio-Frontend%3A-ioasys-books?node-id=0%3A1](https://www.figma.com/file/YXuqJUzNZcR7GveJfVWCKo/Desafio-Frontend%3A-ioasys-books?node-id=0%3A1)
+
+<br />
 
 <p align="center">
   <img alt="BeTheHeroGif" src="image/BeTheHero-WebDemonstration.gif" width="100%">
   
   <img alt="BeTheHeroGif" src="image/BeTheHeroScreenshots.png" width="100%">
 </p>
-
-## Layout
-
-Você pode encontrar o protótipo da aplicação aqui: [https://www.figma.com/file/YXuqJUzNZcR7GveJfVWCKo/Desafio-Frontend%3A-ioasys-books?node-id=0%3A1](https://www.figma.com/file/YXuqJUzNZcR7GveJfVWCKo/Desafio-Frontend%3A-ioasys-books?node-id=0%3A1)
 
 ## Projeto
 
