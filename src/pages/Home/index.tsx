@@ -123,7 +123,7 @@ const Home: React.FC = () => {
         <title>Home | ioasys Books</title>
         <meta
           name="description"
-          content="A melhor plataforma para visualizar informações sobre livros. Entre agora e descubra novas indicações de literaturas para você."
+          content="A melhor plataforma para visualizar informações sobre livros. Entre agora e descubra novas indicações de literaturas para você!"
         />
       </Helmet>
 

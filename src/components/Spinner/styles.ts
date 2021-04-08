@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const SpinnerContainer = styled.div`
-  border: 4.5px solid rgba(0, 0, 0, 0.1);
+  border: 4px solid rgba(0, 0, 0, 0.1);
   border-left-color: var(--primary);
   height: 1.8rem;
   width: 1.8rem;
