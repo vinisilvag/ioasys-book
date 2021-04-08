@@ -26,7 +26,7 @@ cd ioasys-book
 
 yarn
 yarn start
-# or
+# ou
 npm install
 npm run start
 ```
