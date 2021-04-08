@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { FiCameraOff } from 'react-icons/fi';
 
 export const ButtonContainer = styled.button`
   border: none;
@@ -20,6 +21,22 @@ export const Container = styled.div`
   &:hover {
     box-shadow: 0px 16px 80px rgba(84, 16, 95, 0.32);
   }
+`;
+
+export const BookNoImage = styled.div`
+  background-color: #dfdfdf;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 81px;
+  height: 100%;
+`;
+
+export const NoPhotoIcon = styled(FiCameraOff)`
+  color: #aaaaaa;
+  font-size: 1.8rem;
 `;
 
 export const BookImage = styled.img`
@@ -67,4 +84,5 @@ export const BookInfoItem = styled.span`
   font-weight: 400;
   line-height: 20px;
   color: var(--text);
+  text-align: left;
 `;

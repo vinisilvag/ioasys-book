@@ -1,5 +1,7 @@
 import React, { useCallback, useState } from 'react';
 
+import { Helmet } from 'react-helmet-async';
+
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
@@ -74,6 +76,14 @@ const Login: React.FC = () => {
 
   return (
     <Wrapper>
+      <Helmet>
+        <title>Login | ioasys Books</title>
+        <meta
+          name="description"
+          content="A melhor plataforma para visualizar informações sobre livros. Entre agora e descubra novas indicações de literaturas para você."
+        />
+      </Helmet>
+
       <LoginContainer>
         <Logo variant="white" />
 
@@ -102,7 +112,7 @@ const Login: React.FC = () => {
                 />
               </InputWrapper>
 
-              <SubmitButton type="submit">
+              <SubmitButton type="submit" disabled={isLoading}>
                 {isLoading ? <Spinner /> : 'Entrar'}
               </SubmitButton>
             </PasswordWrapper>

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { FiCameraOff } from 'react-icons/fi';
 
 export const Container = styled.div<{ modalIsOpen: boolean }>`
   width: 100%;
@@ -26,7 +27,7 @@ export const ModalCloseButton = styled.button`
   top: 1rem;
   right: 1rem;
 
-  padding: 0.5rem 0.75rem 0.3rem 0.8rem;
+  padding: 0.5rem 0.79rem 0.3rem 0.8rem;
 
   border: 1px solid var(--border);
   border-radius: 100%;
@@ -66,12 +67,31 @@ export const ModalContent = styled.section`
   }
 `;
 
+export const BookNoImage = styled.div`
+  width: 100%;
+
+  background-color: #dfdfdf;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 740px) {
+    height: 554px;
+    padding-right: 1rem;
+  }
+`;
+
+export const NoPhotoIcon = styled(FiCameraOff)`
+  color: #aaaaaa;
+  font-size: 5rem;
+`;
+
 export const BookImage = styled.img`
-  width: 349px;
+  width: 100%;
   filter: drop-shadow(0px 12px 18px rgba(0, 0, 0, 0.3));
 
   @media (max-width: 740px) {
-    width: 100%;
     padding-right: 1rem;
   }
 `;
@@ -153,10 +173,11 @@ export const ReviewContainer = styled.div`
 `;
 
 export const ReviewIcon = styled.img`
-  width: 1.4rem;
-  height: 1.4rem;
+  width: 1.5rem;
+  height: 1.5rem;
 
   margin-right: 0.5rem;
+  margin-bottom: -0.32rem;
 `;
 
 export const ReviewText = styled.p`

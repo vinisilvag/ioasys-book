@@ -17,6 +17,10 @@ import { useAuth } from '../../contexts/AuthContext';
 const Header: React.FC = () => {
   const { user, signOut } = useAuth();
 
+  const handleSignOut = () => {
+    signOut();
+  };
+
   return (
     <Container>
       <Logo variant="black" />
@@ -26,7 +30,7 @@ const Header: React.FC = () => {
           {user.gender === 'F' ? 'Bem-vinda' : 'Bem-vindo'}, <b>{user.name}!</b>
         </HeaderInfo>
 
-        <LogoutButton type="button" onClick={signOut}>
+        <LogoutButton type="button" onClick={handleSignOut}>
           <LogoutImage src={logoutIcon} alt="Sair do app" />
         </LogoutButton>
       </HeaderDetails>
