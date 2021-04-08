@@ -49,7 +49,7 @@ O ioasys Books é uma aplicação simples onde o usuário pode realizar login e 
 
 ```bash
 git clone https://github.com/vinisilvag/ioasys-books.git
-cd ioasys-book
+cd ioasys-books
 
 yarn
 yarn start
