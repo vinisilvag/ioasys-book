@@ -19,16 +19,14 @@
 </p>
 
 <p align="center">
-  <img alt="BeTheHeroGif" src="image/BeTheHero-WebDemonstration.gif" width="100%">
-  
-  <img alt="BeTheHeroGif" src="image/BeTheHeroScreenshots.png" width="100%">
+  <img alt="ioasys Books" src=".github/layout.png" width="100%">
 </p>
 
 <br />
 
 ## Layout
 
-Você pode encontrar o protótipo da aplicação aqui: [https://www.figma.com/file/YXuqJUzNZcR7GveJfVWCKo/Desafio-Frontend%3A-ioasys-books?node-id=0%3A1](https://www.figma.com/file/YXuqJUzNZcR7GveJfVWCKo/Desafio-Frontend%3A-ioasys-books?node-id=0%3A1).
+A aplicação foi prototipada no [Figma](https://www.figma.com/) e pode ser acessada clicando: [aqui](https://www.figma.com/file/YXuqJUzNZcR7GveJfVWCKo/Desafio-Frontend%3A-ioasys-books?node-id=0%3A1).
 
 ## Projeto
 
@@ -36,12 +34,18 @@ Repositório criado para armazenar e documentar o código desenvolvido para o pr
 
 O ioasys Books é uma aplicação simples onde o usuário pode realizar login e visualizar os livros cadasstrados na plataforma naquele momento. Além de visualizar uma listagem paginada de todo os livros, ele pode selecionar um desses livros e ter acesso a mais detalhes do livro escolhido.
 
+O site está no ar e pode ser acessado clicando [aqui](https://vinisilvag-ioasys.netlify.app/).
+
+Nota: O deploy foi feito de forma gratuita no Netlify. Por isso, pode ser que sejam encontrados alguns problemas ao longo do uso da aplicação, principalmente com relação aos processos de autenticação do usuário. Dessa forma, aconselho que, para a melhor experiência no site, o projeto seja executado localmente, através do guia da sessão de setup do [ambiente de desenvolvimento](#iniciando-o-ambiente-de-desenvolvimento)
+
 ## Tecnologias
 
-* [Create React App](https://pt-br.reactjs.org/docs/create-a-new-react-app.html) com Typescript
+* [Create React App](https://pt-br.reactjs.org/docs/create-a-new-react-app.html) com [Typescript](https://www.typescriptlang.org/)
+* [React Hook Form](https://react-hook-form.com/) e [Yup](https://www.npmjs.com/package/yup)
+* [React Helmet](https://www.npmjs.com/package/react-helmet-async)
+* [React Toastify](https://fkhadra.github.io/react-toastify/introduction)
 * [ESLint](https://eslint.org/) e [Prettier](https://prettier.io/)
 * [styled-components](https://styled-components.com/)
-* Layout Reponsivo
 * Context API
 * Persistência das informações do usuário através do localStorage
 
