@@ -19,9 +19,7 @@
 </p>
 
 <p align="center">
-  <img alt="BeTheHeroGif" src="image/BeTheHero-WebDemonstration.gif" width="100%">
-  
-  <img alt="BeTheHeroGif" src="image/BeTheHeroScreenshots.png" width="100%">
+  <img alt="ioasys Books" src=".github/layout.png" width="100%">
 </p>
 
 <br />
@@ -35,6 +33,10 @@ Você pode encontrar o protótipo da aplicação aqui: [https://www.figma.com/fi
 Repositório criado para armazenar e documentar o código desenvolvido para o primeiro desafio do ioasys Camp 2021.
 
 O ioasys Books é uma aplicação simples onde o usuário pode realizar login e visualizar os livros cadasstrados na plataforma naquele momento. Além de visualizar uma listagem paginada de todo os livros, ele pode selecionar um desses livros e ter acesso a mais detalhes do livro escolhido.
+
+O site está no ar e pode ser acessado clicando [aqui](https://vinisilvag-ioasys.netlify.app/).
+
+Nota: O deploy foi feito de forma gratuita no Netlify. Por isso, pode ser que sejam encontrados alguns problemas ao longo do uso da aplicação, principalmente com relação aos processos de autenticação do usuário. Dessa forma, aconselho que, para a melhor experiência no site, o projeto seja executado localmente, através do guia da sessão de setup do [ambiente de desenvolvimento](#iniciando-o-ambiente-de-desenvolvimento)
 
 ## Tecnologias
 
