@@ -12,7 +12,7 @@ Você pode encontrar o protótipo da aplicação aqui: [https://www.figma.com/fi
 
 Para setup da aplicação foi usado a CLI do Create React App com Typescript. Foi utilizado o ESLint como linter e o Prettier como formatador de código padrão. Para a estilização da aplicação foi utilizado a biblioteca styled-components. Para a manutenção de estados globais e persistência das informações, foi usado a Context API do ReactJS.
 
-## Iniciando ambiente de desenvolvimento
+## Iniciando o ambiente de desenvolvimento
 
 ```
 git clone https://github.com/vinisilvag/ioasys-book.git
