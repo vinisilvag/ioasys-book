@@ -1,46 +1,63 @@
-# Getting Started with Create React App
+<h1 align="center">
+    <img alt="ioasys Books" title="ioasys-books" src="image/BeTheHero.svg" width="200px" />
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h4 align="center">
+  ioasys Camp 2021
+</h4>
 
-## Available Scripts
+<p align="center">
+  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=7159c1&labelColor=000000">
+</p>
 
-In the project directory, you can run:
+<p align="center">
+  <a href="#layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#iniciando-o-ambiente-de-desenvolvimento">Iniciando o ambiente de desenvolvimento</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#licença">Licença</a>
+</p>
 
-### `yarn start`
+<p align="center">
+  <img alt="BeTheHeroGif" src="image/BeTheHero-WebDemonstration.gif" width="100%">
+  
+  <img alt="BeTheHeroGif" src="image/BeTheHeroScreenshots.png" width="100%">
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<br />
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Layout
 
-### `yarn test`
+Você pode encontrar o protótipo da aplicação aqui: [https://www.figma.com/file/YXuqJUzNZcR7GveJfVWCKo/Desafio-Frontend%3A-ioasys-books?node-id=0%3A1](https://www.figma.com/file/YXuqJUzNZcR7GveJfVWCKo/Desafio-Frontend%3A-ioasys-books?node-id=0%3A1).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Projeto
 
-### `yarn build`
+Repositório criado para armazenar e documentar o código desenvolvido para o primeiro desafio do ioasys Camp 2021.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+O ioasys Books é uma aplicação simples onde o usuário pode realizar login e visualizar os livros cadasstrados na plataforma naquele momento. Além de visualizar uma listagem paginada de todo os livros, ele pode selecionar um desses livros e ter acesso a mais detalhes do livro escolhido.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Tecnologias
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* [Create React App](https://pt-br.reactjs.org/docs/create-a-new-react-app.html) com Typescript
+* [ESLint](https://eslint.org/) e [Prettier](https://prettier.io/)
+* [styled-components](https://styled-components.com/)
+* Layout Reponsivo
+* Context API
+* Persistência das informações do usuário através do localStorage
 
-### `yarn eject`
+## Iniciando o ambiente de desenvolvimento
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+git clone https://github.com/vinisilvag/ioasys-books.git
+cd ioasys-books
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+yarn
+yarn start
+# ou
+npm install
+npm run start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Licença
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
