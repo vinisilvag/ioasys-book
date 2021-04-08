@@ -135,7 +135,7 @@ export const BookInfoSection = styled.div`
 
 export const BookInfoItem = styled.span`
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 400;
 
   display: flex;
   flex-direction: row;
@@ -143,6 +143,7 @@ export const BookInfoItem = styled.span`
   justify-content: space-between;
 
   span:first-child {
+    font-weight: 500;
     color: var(--light-black);
   }
 `;

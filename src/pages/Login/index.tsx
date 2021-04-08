@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 
-import { useForm, SubmitHandler } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import { useHistory } from 'react-router-dom';
+
 import {
   Wrapper,
   LoginContainer,
@@ -17,6 +19,10 @@ import {
 } from './styles';
 
 import Logo from '../../components/Logo';
+import ErrorCard from '../../components/ErrorCard';
+import Spinner from '../../components/Spinner';
+
+import { useAuth } from '../../contexts/AuthContext';
 
 interface FormValues {
   email: string;
@@ -32,6 +38,13 @@ const schema = yup.object().shape({
 });
 
 const Login: React.FC = () => {
+  const history = useHistory();
+
+  const { signIn } = useAuth();
+
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
   const {
     register,
     handleSubmit,
@@ -40,9 +53,24 @@ const Login: React.FC = () => {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit: SubmitHandler<FormValues> = (data) => {
-    console.log(data);
-  };
+  const onSubmit = useCallback(
+    async (signInCredentials) => {
+      setError(null);
+      setIsLoading(true);
+
+      try {
+        await signIn(signInCredentials);
+
+        setIsLoading(false);
+        history.push('/app');
+      } catch (err) {
+        setError(err.response.data.errors.message);
+      } finally {
+        setIsLoading(false);
+      }
+    },
+    [signIn, history],
+  );
 
   return (
     <Wrapper>
@@ -74,12 +102,16 @@ const Login: React.FC = () => {
                 />
               </InputWrapper>
 
-              <SubmitButton type="submit">Entrar</SubmitButton>
+              <SubmitButton type="submit">
+                {isLoading ? <Spinner /> : 'Entrar'}
+              </SubmitButton>
             </PasswordWrapper>
 
             {errors.password && <Error>{errors.password.message}</Error>}
           </InputContainer>
         </Form>
+
+        {error && <ErrorCard message={error} />}
       </LoginContainer>
     </Wrapper>
   );

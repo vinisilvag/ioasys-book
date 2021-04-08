@@ -12,10 +12,10 @@ import logoutIcon from '../../assets/icons/logout.svg';
 
 import Logo from '../../components/Logo';
 
+import { useAuth } from '../../contexts/AuthContext';
+
 const Header: React.FC = () => {
-  const handleSignOut = () => {
-    console.log('sign out');
-  };
+  const { user, signOut } = useAuth();
 
   return (
     <Container>
@@ -23,10 +23,10 @@ const Header: React.FC = () => {
 
       <HeaderDetails>
         <HeaderInfo>
-          Bem-vindo, <b> Guilherme!</b>
+          {user.gender === 'F' ? 'Bem-vinda' : 'Bem-vindo'}, <b>{user.name}!</b>
         </HeaderInfo>
 
-        <LogoutButton type="button" onClick={handleSignOut}>
+        <LogoutButton type="button" onClick={signOut}>
           <LogoutImage src={logoutIcon} alt="Sair do app" />
         </LogoutButton>
       </HeaderDetails>

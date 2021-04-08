@@ -10,11 +10,16 @@ export const Container = styled.div`
   background-color: var(--white);
   border-radius: 4px;
   box-shadow: 0px 6px 24px rgba(84, 16, 95, 0.13);
+  transition: box-shadow 0.1s;
 
   padding: 1rem;
 
   display: flex;
   flex-direction: row;
+
+  &:hover {
+    box-shadow: 0px 16px 80px rgba(84, 16, 95, 0.32);
+  }
 `;
 
 export const BookImage = styled.img`
@@ -40,12 +45,14 @@ export const BookHeader = styled.div`
 export const BookTitle = styled.span`
   font-size: 0.9rem;
   font-weight: 600;
+  text-align: left;
   color: var(--light-black);
 `;
 
 export const BookAuthor = styled.span`
   font-size: 0.8rem;
   font-weight: 500;
+  text-align: left;
   color: var(--caption);
 `;
 
@@ -57,7 +64,7 @@ export const BookInfo = styled.div`
 
 export const BookInfoItem = styled.span`
   font-size: 0.8rem;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 20px;
   color: var(--text);
 `;

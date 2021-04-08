@@ -18,6 +18,7 @@ export const LoginContainer = styled.main`
   width: 100%;
   max-width: 1136px;
   margin: 0 auto;
+  position: relative;
 
   @media (max-width: 1136px) {
     padding: 0 1rem;
@@ -96,7 +97,8 @@ export const InputWrapper = styled.div`
 `;
 
 export const SubmitButton = styled.button`
-  height: 2.8rem;
+  width: 9rem;
+  height: 2.9rem;
 
   font-size: 1.2rem;
   font-weight: 600;
@@ -106,6 +108,9 @@ export const SubmitButton = styled.button`
   border: none;
   border-radius: 44px;
 
-  padding: 0 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   margin-left: 1rem;
 `;
