@@ -34,9 +34,9 @@ Você pode encontrar o protótipo da aplicação aqui: [https://www.figma.com/fi
 
 ## Projeto
 
-Repositório criado para armazenar e documentar o código desenvolvido para o desafio do ioasys Camp 2021.
+Repositório criado para armazenar e documentar o código desenvolvido para o primeiro desafio do ioasys Camp 2021.
 
-ioasys Books é uma aplicação simples onde o usuário pode realizar login e visualizar os livros cadasstrados na plataforma naquele momento.
+O ioasys Books é uma aplicação simples onde o usuário pode realizar login e visualizar os livros cadasstrados na plataforma naquele momento. Além de visualizar uma listagem paginada de todo os livros, ele pode selecionar um desses livros e ter acesso a mais detalhes do livro escolhido.
 
 ## Tecnologias
 
