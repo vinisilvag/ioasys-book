@@ -26,7 +26,7 @@
 
 ## Layout
 
-Você pode encontrar o protótipo da aplicação aqui: [https://www.figma.com/file/YXuqJUzNZcR7GveJfVWCKo/Desafio-Frontend%3A-ioasys-books?node-id=0%3A1](https://www.figma.com/file/YXuqJUzNZcR7GveJfVWCKo/Desafio-Frontend%3A-ioasys-books?node-id=0%3A1).
+A aplicação foi prototipada no [Figma](https://www.figma.com/) e pode ser acessada clicando: [aqui](https://www.figma.com/file/YXuqJUzNZcR7GveJfVWCKo/Desafio-Frontend%3A-ioasys-books?node-id=0%3A1).
 
 ## Projeto
 
