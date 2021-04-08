@@ -8,13 +8,19 @@ ioasys Books é uma aplicação simples onde o usuário pode realizar login e vi
 
 Você pode encontrar o protótipo da aplicação aqui: [https://www.figma.com/file/YXuqJUzNZcR7GveJfVWCKo/Desafio-Frontend%3A-ioasys-books?node-id=0%3A1](https://www.figma.com/file/YXuqJUzNZcR7GveJfVWCKo/Desafio-Frontend%3A-ioasys-books?node-id=0%3A1)
 
-## Tecnologias
+## Tecnologias e boas práticas empregadas
 
-Para setup da aplicação foi usado a CLI do Create React App com Typescript. Foi utilizado o ESLint como linter e o Prettier como formatador de código padrão. Para a estilização da aplicação foi utilizado a biblioteca styled-components. Para a manutenção de estados globais e persistência das informações, foi usado a Context API do ReactJS.
+* Create React App com Typescript
+* ESLint e Prettier
+* Styled Components
+* Layout Reponsivo
+* Axios para realizar as srequisições HTTP
+* Context API
+* Persistência das informações do usuário através do localStorage
 
 ## Iniciando o ambiente de desenvolvimento
 
-```
+```console
 git clone https://github.com/vinisilvag/ioasys-book.git
 cd ioasys-book
 yarn
