@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="BeTheHeroTitle" title="be-the-hero" src="image/BeTheHero.svg" width="200px" />
+    <img alt="ioasys Books" title="ioasys-books" src="image/BeTheHero.svg" width="200px" />
 </h1>
 
 <h4 align="center">
@@ -62,4 +62,4 @@ npm run start
 
 ## Licença
 
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
