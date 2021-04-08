@@ -20,7 +20,7 @@ Você pode encontrar o protótipo da aplicação aqui: [https://www.figma.com/fi
 
 ## Iniciando o ambiente de desenvolvimento
 
-```
+```bash
 git clone https://github.com/vinisilvag/ioasys-book.git
 cd ioasys-book
 
