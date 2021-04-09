@@ -21,10 +21,14 @@ interface BookCardProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const BookCard: React.FC<BookCardProps> = ({ bookData, ...props }) => (
-  <ButtonContainer type="button" {...props}>
+  <ButtonContainer type="button" {...props} data-testid="card">
     <Container>
       {bookData.imageUrl ? (
-        <BookImage src={bookData.imageUrl} alt={bookData.title} />
+        <BookImage
+          src={bookData.imageUrl}
+          alt={bookData.title}
+          data-testid="image"
+        />
       ) : (
         <BookNoImage>
           <NoPhotoIcon />
@@ -33,14 +37,22 @@ const BookCard: React.FC<BookCardProps> = ({ bookData, ...props }) => (
 
       <BookDetails>
         <BookHeader>
-          <BookTitle>{bookData.title}</BookTitle>
-          <BookAuthor>{bookData.authors.join(', ')}</BookAuthor>
+          <BookTitle data-testid="title">{bookData.title}</BookTitle>
+          <BookAuthor data-testid="authors">
+            {bookData.authors.join(', ')}
+          </BookAuthor>
         </BookHeader>
 
         <BookInfo>
-          <BookInfoItem>{bookData.pageCount} páginas</BookInfoItem>
-          <BookInfoItem>Editora {bookData.publisher}</BookInfoItem>
-          <BookInfoItem>Publicado em {bookData.published}</BookInfoItem>
+          <BookInfoItem data-testid="pageCount">
+            {bookData.pageCount} páginas
+          </BookInfoItem>
+          <BookInfoItem data-testid="publisher">
+            Editora {bookData.publisher}
+          </BookInfoItem>
+          <BookInfoItem data-testid="published">
+            Publicado em {bookData.published}
+          </BookInfoItem>
         </BookInfo>
       </BookDetails>
     </Container>

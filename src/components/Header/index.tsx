@@ -22,15 +22,19 @@ const Header: React.FC = () => {
   };
 
   return (
-    <Container>
+    <Container data-testid="header">
       <Logo variant="black" />
 
       <HeaderDetails>
-        <HeaderInfo>
+        <HeaderInfo data-testid="welcomeMessage">
           {user.gender === 'F' ? 'Bem-vinda' : 'Bem-vindo'}, <b>{user.name}!</b>
         </HeaderInfo>
 
-        <LogoutButton type="button" onClick={handleSignOut}>
+        <LogoutButton
+          type="button"
+          onClick={handleSignOut}
+          data-testid="logoutButton"
+        >
           <LogoutImage src={logoutIcon} alt="Sair do app" />
         </LogoutButton>
       </HeaderDetails>

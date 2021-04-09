@@ -35,6 +35,7 @@ export const InputContainer = styled.fieldset`
   padding: 0.6rem 1rem;
 
   background-color: rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(2px);
   border: none;
   border-radius: 4px;
 

@@ -39,13 +39,17 @@ const BookModal: React.FC<BookModalProps> = ({
   toggleModalFunction,
 }) => (
   <Container modalIsOpen={modalIsOpen}>
-    <ModalCloseButton type="button" onClick={toggleModalFunction}>
+    <ModalCloseButton
+      type="button"
+      onClick={toggleModalFunction}
+      data-testid="modal"
+    >
       <CloseImage src={modalCloseIcon} alt="Fechar" />
     </ModalCloseButton>
 
     <ModalContent>
       {book?.imageUrl ? (
-        <BookImage src={book?.imageUrl} alt={book?.title} />
+        <BookImage src={book?.imageUrl} alt={book?.title} data-testid="image" />
       ) : (
         <BookNoImage>
           <NoPhotoIcon />
@@ -53,8 +57,10 @@ const BookModal: React.FC<BookModalProps> = ({
       )}
       <BookDetails>
         <BookHeader>
-          <BookTitle>{book?.title}</BookTitle>
-          <BookAuthor>{book?.authors.join(', ')}</BookAuthor>
+          <BookTitle data-testid="modalTitle">{book?.title}</BookTitle>
+          <BookAuthor data-testid="authors">
+            {book?.authors.join(', ')}
+          </BookAuthor>
         </BookHeader>
 
         <BookInfo>
@@ -63,37 +69,37 @@ const BookModal: React.FC<BookModalProps> = ({
           <BookInfoSection>
             <BookInfoItem>
               <span>Páginas</span>
-              <span>{book?.pageCount} páginas</span>
+              <span data-testid="pageCount">{book?.pageCount} páginas</span>
             </BookInfoItem>
 
             <BookInfoItem>
               <span>Editora</span>
-              <span>{book?.publisher}</span>
+              <span data-testid="publisher">{book?.publisher}</span>
             </BookInfoItem>
 
             <BookInfoItem>
               <span>Publicação</span>
-              <span>{book?.published}</span>
+              <span data-testid="published">{book?.published}</span>
             </BookInfoItem>
 
             <BookInfoItem>
               <span>Idioma</span>
-              <span>{book?.language}</span>
+              <span data-testid="language">{book?.language}</span>
             </BookInfoItem>
 
             <BookInfoItem>
               <span>Título Original</span>
-              <span>{book?.title}</span>
+              <span data-testid="title">{book?.title}</span>
             </BookInfoItem>
 
             <BookInfoItem>
               <span>ISBN-10</span>
-              <span>{book?.isbn10}</span>
+              <span data-testid="isbn10">{book?.isbn10}</span>
             </BookInfoItem>
 
             <BookInfoItem>
               <span>ISBN-13</span>
-              <span>{book?.isbn13}</span>
+              <span data-testid="isbn13">{book?.isbn13}</span>
             </BookInfoItem>
           </BookInfoSection>
         </BookInfo>
@@ -103,7 +109,7 @@ const BookModal: React.FC<BookModalProps> = ({
 
           <ReviewContainer>
             <ReviewText>
-              <ReviewIcon src={quotesIcon} alt="Aspas" />
+              <ReviewIcon src={quotesIcon} alt="Citação" />
               {book?.description}
             </ReviewText>
           </ReviewContainer>

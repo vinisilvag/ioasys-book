@@ -7,9 +7,9 @@ interface ErrorCardProps {
 }
 
 const ErrorCard: React.FC<ErrorCardProps> = ({ message }) => (
-  <Container>
+  <Container data-testid="card">
     <Triangle />
-    <Message>{message}</Message>
+    <Message data-testid="message">{message}</Message>
   </Container>
 );
 
