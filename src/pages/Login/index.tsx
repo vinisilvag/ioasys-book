@@ -63,7 +63,7 @@ const Login: React.FC = () => {
       try {
         await signIn(signInCredentials);
 
-        history.push('/app');
+        history.push('/home');
       } catch (err) {
         setIsLoading(false);
         setError(err.response.data.errors.message);
