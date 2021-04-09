@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="ioasys Books" title="ioasys-books" src="image/BeTheHero.svg" width="200px" />
+    <img alt="ioasys Books" title="ioasys-books" src=".github/logo.png" width="140px" />
 </h1>
 
 <h4 align="center">
