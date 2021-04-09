@@ -1,3 +1,4 @@
+/* eslint-disable operator-linebreak */
 import axios, { AxiosError } from 'axios';
 
 const api = axios.create({
@@ -61,9 +62,10 @@ async function refresh(error: AxiosError) {
           localStorage.removeItem('@ioasysBooks:refreshToken');
           localStorage.removeItem('@ioasysBooks:user');
 
-          window.location.href = process.env.REACT_APP_DEVELOPMENT_SERVER
-            ? 'http://localhost:3000/'
-            : 'https://vinisilvag-ioasys.netlify.app/';
+          window.location.href =
+            process.env.REACT_APP_SERVER === 'production'
+              ? 'https://vinisilvag-ioasys.netlify.app/'
+              : 'http://localhost:3000/';
 
           return reject(error);
         });

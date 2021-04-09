@@ -8,7 +8,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import {
   Wrapper,
   Container,
-  ErrorText,
   LoadingText,
   Main,
   PaginationContainer,
@@ -50,7 +49,7 @@ interface PaginationData {
 
 const Home: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState(false);
 
   const [selectedBook, setSelectedBook] = useState<BookData | null>(null);
 
@@ -81,9 +80,9 @@ const Home: React.FC = () => {
         });
       })
       .catch(() => {
-        setError('Erro ao autenticar o usuário. Faça login novamente.');
+        setError(true);
 
-        toast.error('Falha ao carregar os dados da api.', {
+        toast.error('Falha ao carregar os livros do banco de dados.', {
           position: 'top-right',
           autoClose: 5000,
           hideProgressBar: false,
@@ -143,9 +142,7 @@ const Home: React.FC = () => {
             <LoadingText>Carregando...</LoadingText>
           ) : (
             <>
-              {error ? (
-                <ErrorText>{error}</ErrorText>
-              ) : (
+              {!error && (
                 <>
                   <Main>
                     {books.map((book) => (
