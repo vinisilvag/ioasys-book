@@ -8,6 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import {
   Wrapper,
   Container,
+  ErrorText,
   LoadingText,
   Main,
   PaginationContainer,
@@ -49,6 +50,7 @@ interface PaginationData {
 
 const Home: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   const [selectedBook, setSelectedBook] = useState<BookData | null>(null);
 
@@ -76,6 +78,8 @@ const Home: React.FC = () => {
         });
       })
       .catch(() => {
+        setError('Erro ao autenticar o usuário. Faça login novamente.');
+
         toast.error('Falha ao carregar os dados da api.', {
           position: 'top-right',
           autoClose: 5000,
@@ -136,55 +140,63 @@ const Home: React.FC = () => {
             <LoadingText>Carregando...</LoadingText>
           ) : (
             <>
-              <Main>
-                {books.map((book) => (
-                  <BookCard
-                    onClick={() => handleClickedModal(book)}
-                    bookData={book}
-                    key={book.id}
-                  />
-                ))}
-              </Main>
+              {error ? (
+                <ErrorText>{error}</ErrorText>
+              ) : (
+                <>
+                  <Main>
+                    {books.map((book) => (
+                      <BookCard
+                        onClick={() => handleClickedModal(book)}
+                        bookData={book}
+                        key={book.id}
+                      />
+                    ))}
+                  </Main>
 
-              <PaginationContainer>
-                <PaginationWrapper>
-                  <PaginationSpan>
-                    Página <b> {currentPage} </b> de{' '}
-                    <b>
-                      {paginationData?.totalPages &&
-                        Math.ceil(paginationData.totalPages)}
-                    </b>
-                  </PaginationSpan>
+                  <PaginationContainer>
+                    <PaginationWrapper>
+                      <PaginationSpan>
+                        Página <b> {currentPage} </b> de{' '}
+                        <b>
+                          {paginationData?.totalPages &&
+                            Math.ceil(paginationData.totalPages)}
+                        </b>
+                      </PaginationSpan>
 
-                  <PaginationButton
-                    type="button"
-                    onClick={() => handlePageChange('PREV')}
-                    disabled={currentPage <= 1}
-                  >
-                    <PaginationButtonImage
-                      src={currentPage <= 1 ? chevronDisabled : chevronEnabled}
-                      alt="Voltar"
-                    />
-                  </PaginationButton>
-                </PaginationWrapper>
+                      <PaginationButton
+                        type="button"
+                        onClick={() => handlePageChange('PREV')}
+                        disabled={currentPage <= 1}
+                      >
+                        <PaginationButtonImage
+                          src={
+                            currentPage <= 1 ? chevronDisabled : chevronEnabled
+                          }
+                          alt="Voltar"
+                        />
+                      </PaginationButton>
+                    </PaginationWrapper>
 
-                <PaginationButton
-                  type="button"
-                  onClick={() => handlePageChange('NEXT')}
-                  disabled={
-                    currentPage >= Math.ceil(paginationData?.totalPages!)
-                  }
-                >
-                  <PaginationButtonImage
-                    src={
-                      currentPage < Math.ceil(paginationData?.totalPages!)
-                        ? chevronEnabled
-                        : chevronDisabled
-                    }
-                    alt="Avançar"
-                  />
-                </PaginationButton>
-              </PaginationContainer>
+                    <PaginationButton
+                      type="button"
+                      onClick={() => handlePageChange('NEXT')}
+                      disabled={
+                        currentPage >= Math.ceil(paginationData?.totalPages!)
+                      }
+                    >
+                      <PaginationButtonImage
+                        src={
+                          currentPage < Math.ceil(paginationData?.totalPages!)
+                            ? chevronEnabled
+                            : chevronDisabled
+                        }
+                        alt="Avançar"
+                      />
+                    </PaginationButton>
+                  </PaginationContainer>
+                </>
+              )}
             </>
           )}
         </Container>

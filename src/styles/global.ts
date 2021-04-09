@@ -46,7 +46,7 @@ export default createGlobalStyle`
   }
 
   ::-webkit-scrollbar-track {
-    border-radius: 10px;
+    border-radius: 1.2px;
     background-color: white;
   }
 

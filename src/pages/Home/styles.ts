@@ -28,6 +28,13 @@ export const LoadingText = styled.p`
   color: var(--light-black);
 `;
 
+export const ErrorText = styled.p`
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  color: var(--light-black);
+`;
+
 export const Main = styled.main`
   margin-top: 2.5rem;
 
