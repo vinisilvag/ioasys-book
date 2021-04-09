@@ -32,12 +32,16 @@ export const Main = styled.main`
   margin-top: 2.5rem;
 
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   column-gap: 1rem;
   row-gap: 1rem;
 
-  @media (max-width: 990px) {
+  @media (max-width: 1136px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 940px) {
     grid-template-columns: repeat(2, 1fr);
   }
 

@@ -30,7 +30,7 @@ export const BookNoImage = styled.div`
   align-items: center;
   justify-content: center;
 
-  width: 81px;
+  min-width: 81px;
   height: 100%;
 `;
 
@@ -79,7 +79,7 @@ export const BookAuthor = styled.span`
   color: var(--caption);
 
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
