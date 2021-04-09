@@ -4,6 +4,7 @@ export const Container = styled.div`
   position: absolute;
   display: inline-flex;
   background-color: var(--error-card);
+  backdrop-filter: blur(2px);
   border-radius: 4px;
 
   bottom: -5.2rem;
@@ -17,6 +18,7 @@ export const Triangle = styled.div`
   border-right: 10px solid transparent;
 
   border-bottom: 10px solid var(--error-card);
+  backdrop-filter: blur(2px);
 
   top: -10px;
   left: 1rem;

@@ -68,6 +68,9 @@ const Home: React.FC = () => {
           amount: 12,
           category: 'biographies',
         },
+        headers: {
+          Authorization: '',
+        },
       })
       .then((response) => {
         setBooks(response.data.data);

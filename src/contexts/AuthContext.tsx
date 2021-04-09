@@ -37,11 +37,6 @@ export const AuthProvider: React.FC = ({ children }) => {
     const user = localStorage.getItem('@ioasysBooks:user');
 
     if (token && refreshToken && user) {
-      api.interceptors.request.use((config) => {
-        config.headers.Authorization = token ? `Bearer ${token}` : '';
-        return config;
-      });
-
       return { token, refreshToken, user: JSON.parse(user) };
     }
 
@@ -54,11 +49,6 @@ export const AuthProvider: React.FC = ({ children }) => {
     const user = response.data;
     const token = response.headers.authorization;
     const refreshToken = response.headers['refresh-token'];
-
-    api.interceptors.request.use((config) => {
-      config.headers.Authorization = token ? `Bearer ${token}` : '';
-      return config;
-    });
 
     localStorage.setItem('@ioasysBooks:token', token);
     localStorage.setItem('@ioasysBooks:refreshToken', refreshToken);

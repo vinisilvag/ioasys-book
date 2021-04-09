@@ -62,11 +62,14 @@ const Login: React.FC = () => {
 
       try {
         await signIn(signInCredentials);
-
-        history.push('/home');
       } catch (err) {
         setIsLoading(false);
-        setError(err.response.data.errors.message);
+
+        if (err.response.status === 401) {
+          setError('Email e/ou senha incorretos.');
+        } else {
+          setError('Falha ao realizar o login.');
+        }
       }
     },
     [signIn, history],

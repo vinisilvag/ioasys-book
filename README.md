@@ -30,7 +30,7 @@ A aplicação foi prototipada no [Figma](https://www.figma.com/) e pode ser aces
 
 ## Projeto
 
-O ioasys Books é uma aplicação simples onde o usuário pode realizar login e visualizar os livros cadasstrados na plataforma naquele momento. Além de visualizar uma listagem paginada de todo os livros, ele pode selecionar um desses livros e ter acesso a mais detalhes do livro escolhido.
+O ioasys Books é uma aplicação simples onde o usuário pode realizar login e visualizar os livros cadastrados na plataforma naquele momento. Além de visualizar uma listagem paginada de todo os livros, ele pode selecionar um desses livros e ter acesso a mais detalhes do livro escolhido.
 
 O site está no ar e pode ser acessado clicando [aqui](https://vinisilvag-ioasys.netlify.app/).
 
