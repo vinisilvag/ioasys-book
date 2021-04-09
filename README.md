@@ -43,6 +43,7 @@ Nota: O deploy foi feito de forma gratuita no Netlify. Por isso, pode ser que se
 - [React Helmet](https://www.npmjs.com/package/react-helmet-async)
 - [React Toastify](https://fkhadra.github.io/react-toastify/introduction)
 - [ESLint](https://eslint.org/) e [Prettier](https://prettier.io/)
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 - [styled-components](https://styled-components.com/)
 - Context API
 - Persistência das informações do usuário através do localStorage
